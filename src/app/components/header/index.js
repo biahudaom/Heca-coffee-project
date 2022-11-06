@@ -8,11 +8,11 @@ class Navigation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            token: '', userName: '',searchtxt:''
+            token: '', userName: '', searchtxt: ''
         };
     }
-    handleChange(e){
-        this.setState({ [e.target.name] : e.target.value})
+    handleChange(e) {
+        this.setState({ [e.target.name]: e.target.value })
     }
     async componentDidMount() {
         let cookies = await GetUserLogin.isAuthenticate();
@@ -29,8 +29,8 @@ class Navigation extends Component {
         event.preventDefault();
         await GetUserLogin.logout();
     }
-    handleClickSearch = event=>{
-        let{ searchtxt } = this.state;
+    handleClickSearch = event => {
+        let { searchtxt } = this.state;
         this.props.history.push(`/product/catalogsearch/result/${searchtxt}`);
     }
     render() {
@@ -43,7 +43,7 @@ class Navigation extends Component {
                             <div className="row">
                                 <div className="col-lg-12 text-center">
                                     <a href="/" className="mb-0 text-white">
-                                        20% cashback for new users | Code: <strong><span className="text-light">OGOFERS13 <span className="mdi mdi-tag-faces" /></span> </strong>
+                                        20% cashback for new users | Code: <strong><span className="text-light">HCCF1234 <span className="mdi mdi-tag-faces" /></span> </strong>
                                     </a>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ class Navigation extends Component {
                     </div>
                     <nav className="navbar navbar-light navbar-expand-lg bg-dark bg-faded osahan-menu">
                         <div className="container-fluid">
-                            <a className="navbar-brand" href="/" style={{color: '#fff'}}> Big SuperMarket </a>
+                            <a className="navbar-brand" href="/" style={{ color: '#fff' }}> HECA COFFEE </a>
                             <button className="navbar-toggler navbar-toggler-white" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon" />
                             </button>
@@ -59,7 +59,7 @@ class Navigation extends Component {
                                 <div className="navbar-nav mr-auto mt-2 mt-lg-0 margin-auto top-categories-search-main">
                                     <div className="top-categories-search" onSubmit={this.handleClickSearch}>
                                         <div className="input-group">
-                                            <input className="form-control" placeholder="Search products in Your City" aria-label="Search products in Your City" type="text" name="searchtxt" value={searchtxt} onChange={(e)=>this.handleChange(e)}/>
+                                            <input className="form-control" placeholder="Search kind of coffee" aria-label="Search kind of coffee" type="text" name="searchtxt" value={searchtxt} onChange={(e) => this.handleChange(e)} />
                                             <span className="input-group-btn">
                                                 <button className="btn btn-secondary" type="submit" onClick={this.handleClickSearch}><i className="mdi mdi-file-find" /> Search</button>
                                             </span>

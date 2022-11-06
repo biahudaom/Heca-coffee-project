@@ -53,7 +53,7 @@ export default class Address extends Component {
                                         </div>
                                     </div>
                                     <h4>{user.firstName}</h4>
-                                    <p>+977 {user.phone}</p>
+                                    <p>+84 {user.phone}</p>
                                     {/* <div className="earn-points"><img src="images/Dollar.svg" alt />Points : <span>20</span></div> */}
                                 </div>
                             </div>
@@ -100,7 +100,7 @@ export default class Address extends Component {
                                                                     </div>
                                                                     <div className="address-dt-all">
                                                                         {/* <h4>Home</h4> */}
-                                                                        <p>#{row.shipping+' , ' +row.area+' , ' +row.city+' , ' +row.discrict+' , ' +row.states}</p>
+                                                                        <p>#{row.shipping + ' , ' + row.area + ' , ' + row.city + ' , ' + row.discrict + ' , ' + row.states}</p>
                                                                         <ul className="action-btns">
                                                                             <li><a href="#" className="action-btn"><i className="uil uil-edit" /></a></li>
                                                                             <li><a href="#" className="action-btn"><i className="uil uil-trash-alt" /></a></li>
@@ -110,7 +110,7 @@ export default class Address extends Component {
 
                                                             ))
                                                             : <p>Loading...</p>}
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
